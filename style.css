@@ -222,7 +222,6 @@ body {
 @media (min-width: 58rem) {
 	.wrapper--white {
 		padding-block: var(--spacer-16);
-		gap: var(--spacer-40);
 	}
 }
 
@@ -285,6 +284,7 @@ body {
 	justify-self: end;
 	font-size: var(--font-size-800);
 	color: var(--color-primary-400);
+	line-height: 1;
 }
 
 @media (min-width: 58rem) {
