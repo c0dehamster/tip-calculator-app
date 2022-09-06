@@ -53,7 +53,7 @@ For this project, I learned about HTML forms, input validation with JavaScript, 
 
 I haven't found a good way to make the reset button active only when some of the form fields are filled. The method I used involves passing the function that toggles the reset button on and off as a callback to every event listener on the page. This works but I would like to know the proper solution.
 
-This is the first time I tried to use BEM. It made naming elements somewhat easier. However, I wasn't sure about appropriate class names for certain elements. Should definitely see more examples of the naming rules in practice.
+This is the first time I tried to use BEM. It made naming elements somewhat easier. However, I wasn't sure about appropriate class names for certain elements. Should definitely see more examples of the naming rules used in practice.
 
 ### Useful resources
 
