@@ -138,7 +138,8 @@ body {
 
 @media (min-width: 58rem) {
 	.logo {
-		margin-bottom: 90px;
+		position: absolute;
+		top: 15.625vh;
 	}
 }
 
