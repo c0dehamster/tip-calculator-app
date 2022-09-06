@@ -112,6 +112,8 @@ body {
 .card {
 	background-color: var(--color-neutral-100);
 	border-radius: var(--radius-24);
+	position: relative;
+	margin-top: 144px;
 	max-width: 481px;
 	display: flex;
 	flex-wrap: wrap;
@@ -123,6 +125,7 @@ body {
 @media (min-width: 58rem) {
 	.card {
 		max-width: 930px;
+		top: 65px;
 	}
 }
 
@@ -132,14 +135,13 @@ body {
 }
 
 .logo {
-	margin-bottom: var(--spacer-40);
-	margin-top: var(--spacer-40);
+	position: absolute;
+	top: 50px;
 }
 
 @media (min-width: 58rem) {
 	.logo {
-		position: absolute;
-		top: 15.625vh;
+		top: 160px;
 	}
 }
 
@@ -349,4 +351,8 @@ body {
 
 .margin-top-16 {
 	margin-top: var(--spacer-16);
+}
+
+.margin-top-32 {
+	margin-top: var(--spacer-32);
 }
