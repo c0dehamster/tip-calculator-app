@@ -1,3 +1,4 @@
+/* Reset */
 /* CSS reset by Andy Bell */
 
 /* Box sizing rules */
@@ -98,14 +99,6 @@ body {
 	background-color: var(--color-neutral-light-grayish-cyan);
 }
 
-/* Layout and dimensions */
-
-/* Colors */
-
-/* Typography */
-
-/* Block level */
-
 .logo {
 	position: absolute;
 	left: 0px;
@@ -136,27 +129,14 @@ body {
 	/* Typography */
 }
 
+/* Common elements */
+
 .inputs,
 .outputs-wrapper {
 	max-width: 30rem;
 
 	display: flex;
 	flex-direction: column;
-}
-
-.inputs {
-	padding: clamp(0.5rem, 2.13vw, 1rem);
-}
-
-.outputs-wrapper {
-	padding: clamp(1.25rem, 5.33vw, 2.5rem);
-	border-radius: 1rem;
-
-	background-color: var(--color-neutral-very-dark-cyan);
-}
-
-.select-tip {
-	margin-block-end: clamp(2.25rem, 9.6vw, 2.75rem);
 }
 
 .input,
@@ -184,15 +164,11 @@ body {
 	justify-content: center;
 }
 
-.outputs {
-	display: grid;
-	gap: 3rem;
+/* 1. Input field */
 
-	margin-block-start: 1rem;
-	margin-block-end: 2rem;
+.inputs {
+	padding: clamp(0.5rem, 2.13vw, 1rem);
 }
-
-/* Elements */
 
 .inputs__bill,
 .inputs__number-of-people {
@@ -200,12 +176,25 @@ body {
 	grid-template-columns: 4fr 3fr;
 }
 
+.inputs__label {
+	font-size: var(--font-size-300);
+	color: var(--color-neutral-dark-grayish-cyan);
+}
+
+.input--span-2 {
+	grid-column: span 2;
+}
+
+/* 1.1 Bill */
+
 .inputs__bill {
 	margin-block-end: clamp(2.25rem, 9.6vw, 2.75rem);
 }
 
-.inputs__number-of-people {
-	margin-block-end: 0.5rem;
+/* 1.2. Tip input */
+
+.select-tip {
+	margin-block-end: clamp(2.25rem, 9.6vw, 2.75rem);
 }
 
 .select-tip__grid {
@@ -219,11 +208,6 @@ body {
 	border: none;
 }
 
-.inputs__label {
-	font-size: var(--font-size-300);
-	color: var(--color-neutral-dark-grayish-cyan);
-}
-
 .select-tip__label {
 	font-size: var(--font-size-300);
 }
@@ -232,9 +216,41 @@ body {
 	/* display: none; */
 }
 
-.outputs__grid-row {
+.button--radio,
+.input--custom-tip {
+	width: 100%;
+}
+
+.button--radio {
+	background-color: var(--color-neutral-very-dark-cyan);
+	color: var(--color-neutral-white);
+
+	font-size: var(--font-size-400);
+}
+
+/* 1.3. Number of people */
+
+.inputs__number-of-people {
+	margin-block-end: 0.5rem;
+}
+
+/* 2. Output field */
+
+.outputs-wrapper {
+	padding: clamp(1.25rem, 5.33vw, 2.5rem);
+	border-radius: 1rem;
+
+	background-color: var(--color-neutral-very-dark-cyan);
+}
+
+/* 2.1. Outputs */
+
+.outputs {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+
+	margin-block-start: 1rem;
+	margin-block-end: 2rem;
 }
 
 .outputs__result,
@@ -265,24 +281,6 @@ body {
 	color: var(--color-neutral-grayish-cyan);
 }
 
-/* Modifiers */
-
-.input--span-2 {
-	grid-column: span 2;
-}
-
-.button--radio,
-.input--custom-tip {
-	width: 100%;
-}
-
-.button--radio {
-	background-color: var(--color-neutral-very-dark-cyan);
-	color: var(--color-neutral-white);
-
-	font-size: var(--font-size-400);
-}
-
 .button--reset {
 	margin-block-start: auto;
 
@@ -291,6 +289,8 @@ body {
 
 	font-size: var(--font-size-300);
 }
+
+/* Active states */
 
 .button--radio:hover {
 	background-color: var(--color-neutral-light-cyan);
@@ -309,6 +309,8 @@ body {
 .button--reset[data-active="true"]:hover {
 	background-color: var(--color-neutral-light-cyan);
 }
+
+/* Media query */
 
 @media screen and (min-width: 25rem) {
 	.select-tip__grid {
