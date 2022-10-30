@@ -1,0 +1,322 @@
+/* CSS reset by Andy Bell */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	padding: 0;
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* No animations on the page, nothing to turn off */
+
+/* General styling */
+
+:root {
+	/* Colors */
+
+	--color-primary-strong-cyan: hsl(172, 67%, 45%);
+
+	--color-neutral-very-dark-cyan: hsl(183, 100%, 15%);
+	--color-neutral-dark-grayish-cyan: hsl(186, 14%, 43%);
+	--color-neutral-grayish-cyan: hsl(184, 14%, 56%);
+	--color-neutral-light-cyan: hsl(173, 61%, 77%);
+	--color-neutral-light-grayish-cyan: hsl(185, 41%, 84%);
+	--color-neutral-very-light-grayish-cyan: hsl(189, 41%, 97%);
+	--color-neutral-white: hsl(0, 0%, 100%);
+
+	/* Typography */
+
+	--font-size-200: 14px;
+	--font-size-300: 16px;
+	--font-size-400: 24px;
+	--font-size-600: 30px;
+	--font-size-900: 46px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	font-family: "Space Mono", monospace;
+	font-weight: 700;
+
+	background-color: var(--color-neutral-light-grayish-cyan);
+}
+
+/* Layout and dimensions */
+
+/* Colors */
+
+/* Typography */
+
+/* Block level */
+
+.logo {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: -5.8125rem;
+
+	display: flex;
+	justify-content: center;
+}
+
+.card {
+	/* Layout and dimensions */
+
+	display: grid;
+	gap: clamp(1rem, 6.4vw, 2rem);
+
+	position: relative;
+	top: 9rem;
+
+	max-width: 922px;
+	padding: clamp(1rem, 6.4vw, 2rem);
+
+	border-radius: 1.25rem;
+	/* Colors */
+
+	background-color: var(--color-neutral-white);
+
+	/* Typography */
+}
+
+.inputs,
+.outputs-wrapper {
+	max-width: 30rem;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.inputs {
+	padding: clamp(0.5rem, 2.13vw, 1rem);
+}
+
+.outputs-wrapper {
+	padding: clamp(1.25rem, 5.33vw, 2.5rem);
+	border-radius: 1rem;
+
+	background-color: var(--color-neutral-very-dark-cyan);
+}
+
+.select-tip {
+	margin-block-end: clamp(2.25rem, 9.6vw, 2.75rem);
+}
+
+.input,
+.button {
+	height: 3rem;
+
+	border: none;
+	border-radius: 6px;
+}
+
+.input {
+	padding-inline-end: 1rem;
+
+	background-color: var(--color-neutral-very-light-grayish-cyan);
+
+	font-size: var(--font-size-400);
+	text-align: end;
+}
+
+.button {
+	text-align: center;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.outputs {
+	display: grid;
+	gap: 3rem;
+
+	margin-block-start: 1rem;
+	margin-block-end: 2rem;
+}
+
+/* Elements */
+
+.inputs__bill,
+.inputs__number-of-people {
+	display: grid;
+	grid-template-columns: 4fr 3fr;
+}
+
+.inputs__bill {
+	margin-block-end: clamp(2.25rem, 9.6vw, 2.75rem);
+}
+
+.inputs__number-of-people {
+	margin-block-end: 0.5rem;
+}
+
+.select-tip__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+
+	margin-block-start: 1rem;
+	padding: 0px;
+
+	border: none;
+}
+
+.inputs__label {
+	font-size: var(--font-size-300);
+	color: var(--color-neutral-dark-grayish-cyan);
+}
+
+.select-tip__label {
+	font-size: var(--font-size-300);
+}
+
+.select-tip__radio {
+	display: none;
+}
+
+.outputs__grid-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.outputs__result,
+.outputs__label,
+.outputs__comment {
+	align-self: center;
+}
+
+.outputs__result {
+	grid-row: span 2;
+
+	justify-self: end;
+
+	font-size: clamp(var(--font-size-600), 8vw, var(--font-size-900));
+	color: var(--color-primary-strong-cyan);
+	line-height: 0.2;
+}
+
+.outputs__label {
+	color: var(--color-neutral-white);
+	font-size: var(--font-size-300);
+}
+
+.outputs__comment {
+	align-self: baseline;
+
+	font-size: var(--font-size-200);
+	color: var(--color-neutral-grayish-cyan);
+}
+
+/* Modifiers */
+
+.input--span-2 {
+	grid-column: span 2;
+}
+
+.button--radio,
+.input--custom-tip {
+	width: 100%;
+}
+
+.button--radio {
+	background-color: var(--color-neutral-very-dark-cyan);
+	color: var(--color-neutral-white);
+
+	font-size: var(--font-size-400);
+}
+
+.button--reset {
+	margin-block-start: auto;
+
+	background-color: var(--color-primary-strong-cyan);
+	color: var(--color-neutral-very-dark-cyan);
+
+	font-size: var(--font-size-300);
+}
+
+.button--reset[data-active="false"] {
+	opacity: 25%;
+}
+
+.button--reset[data-active="true"]:hover {
+	background-color: var(--color-neutral-light-cyan);
+}
+
+@media screen and (min-width: 25rem) {
+	.select-tip__grid {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 50rem) {
+	body {
+		justify-content: center;
+	}
+
+	.logo {
+		top: calc((3.5rem + 8.6vh) * (-1));
+	}
+
+	.card {
+		top: 2rem;
+		grid-template-columns: 1fr 1fr;
+	}
+}

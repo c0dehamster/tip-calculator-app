@@ -4,7 +4,86 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+		<script defer src="script.js"></script>
 		<title>Tip calculator app</title>
 	</head>
-	<body></body>
+
+	<body>
+		<main class="card">
+			<picture class="logo">
+				<img src="./images/logo.svg" alt="" aria-hidden="true" class="logo__image" />
+			</picture>
+
+			<form action="" class="inputs" id="inputs">
+				<div class="inputs__bill">
+					<label for="bill" class="inputs__label">Bill</label>
+					<p class="inputs__error"></p>
+					<input type="text" class="input input--span-2" placeholder="0" id="bill" />
+				</div>
+
+				<div class="select-tip">
+					<p class="inputs__label">Select Tip %</p>
+					<fieldset class="select-tip__grid">
+						<legend class="select-tip__legend"></legend>
+
+						<label for="radio5" class="button button--radio">
+							<div class="button__text">5%</div>
+							<input type="radio" name="select-tip" class="select-tip__radio" value="5" id="radio5" />
+						</label>
+
+						<label for="radio10" class="button button--radio">
+							<div class="button__text">10%</div>
+							<input type="radio" name="select-tip" class="select-tip__radio" value="10" id="radio10" />
+						</label>
+
+						<label for="radio15" class="button button--radio">
+							<div class="button__text">15%</div>
+							<input type="radio" name="select-tip" class="select-tip__radio" value="15" id="radio15" />
+						</label>
+
+						<label for="radio25" class="button button--radio">
+							<div class="button__text">25%</div>
+							<input type="radio" name="select-tip" class="select-tip__radio" value="25" id="radio25" />
+						</label>
+
+						<label for="radio50" class="button button--radio">
+							<div class="button__text">50%</div>
+							<input type="radio" name="select-tip" class="select-tip__radio" value="50" id="radio50" />
+						</label>
+
+						<input type="text" class="input input--custom-tip" placeholder="0" id="customTip" />
+					</fieldset>
+				</div>
+
+				<div class="inputs__number-of-people">
+					<label for="number-of-people" class="inputs__label">Number of people</label>
+					<p class="inputs__error"></p>
+					<input type="text" class="input input--span-2" placeholder="0" id="number-of-people" />
+				</div>
+			</form>
+
+			<section class="outputs-wrapper">
+				<div class="outputs">
+					<div class="outputs__grid-row">
+						<p class="outputs__label">Tip Amount</p>
+						<p class="outputs__result" id="result-tip-amount">$0.00</p>
+						<p class="outputs__comment">/ person</p>
+					</div>
+
+					<div class="outputs__grid-row">
+						<p class="outputs__label">Total</p>
+						<p class="outputs__result" id="result-total">$0.00</p>
+						<p class="outputs__comment">/ person</p>
+					</div>
+				</div>
+
+				<button type="button" class="button button--reset" data-active="true" form="inputs">RESET</button>
+			</section>
+		</main>
+	</body>
 </html>
