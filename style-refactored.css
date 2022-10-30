@@ -78,6 +78,8 @@ select {
 	--color-neutral-very-light-grayish-cyan: hsl(189, 41%, 97%);
 	--color-neutral-white: hsl(0, 0%, 100%);
 
+	--color-accent-red: hsl(346, 95%, 44%);
+
 	/* Typography */
 
 	--font-size-200: 14px;
@@ -141,10 +143,14 @@ body {
 
 .input,
 .button {
+	width: 100%;
 	height: 3rem;
 
 	border: none;
+	outline: none;
 	border-radius: 6px;
+
+	cursor: pointer;
 }
 
 .input {
@@ -181,7 +187,8 @@ body {
 	color: var(--color-neutral-dark-grayish-cyan);
 }
 
-.input--span-2 {
+.input--bill,
+.input--number-of-people {
 	grid-column: span 2;
 }
 
@@ -195,6 +202,7 @@ body {
 
 .select-tip {
 	margin-block-end: clamp(2.25rem, 9.6vw, 2.75rem);
+	position: relative;
 }
 
 .select-tip__grid {
@@ -208,22 +216,19 @@ body {
 	border: none;
 }
 
-.select-tip__label {
-	font-size: var(--font-size-300);
+.select-tip__legend {
+	position: absolute;
+	color: transparent;
+	z-index: -1;
 }
 
 .select-tip__radio {
-	/* display: none; */
+	display: none;
 }
 
-.button--radio,
-.input--custom-tip {
-	width: 100%;
-}
-
-.button--radio {
+.button--select-tip {
 	background-color: var(--color-neutral-very-dark-cyan);
-	color: var(--color-neutral-white);
+	color: var(--color-neutral-very-light-grayish-cyan);
 
 	font-size: var(--font-size-400);
 }
@@ -297,25 +302,41 @@ body {
 
 /* Active states */
 
-.button--radio:hover {
-	background-color: var(--color-neutral-light-cyan);
-	color: var(--color-neutral-very-dark-cyan);
+.input:focus,
+.input:active {
+	border: 2px solid var(--color-primary-strong-cyan);
 }
 
-.button--radio .select-tip__radio:checked {
+@media (hover: hover) {
+	.input:hover {
+		border: 2px solid var(--color-primary-strong-cyan);
+	}
+
+	.button--select-tip:hover {
+		color: var(--color-neutral-very-dark-cyan);
+		background-color: var(--color-neutral-light-cyan);
+	}
+
+	.button--reset.button--active:hover {
+		background-color: var(--color-neutral-light-cyan);
+	}
+}
+
+.input--error {
+	border: 2px solid var(--color-accent-red);
+}
+
+.select-tip__radio:checked + .button {
+	color: var(--color-neutral-very-dark-cyan);
 	background-color: var(--color-primary-strong-cyan);
-	color: var(--color-neutral-very-dark-cyan);
 }
 
-.button--reset[data-active="false"] {
+.button--inactive {
+	/* Default state, before there is anything to reset */
 	opacity: 25%;
 }
 
-.button--reset[data-active="true"]:hover {
-	background-color: var(--color-neutral-light-cyan);
-}
-
-/* Media query */
+/* Screen size media query */
 
 @media screen and (min-width: 25rem) {
 	.select-tip__grid {
