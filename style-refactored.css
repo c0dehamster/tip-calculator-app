@@ -253,6 +253,11 @@ body {
 	margin-block-end: 2rem;
 }
 
+.outputs__grid-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
 .outputs__result,
 .outputs__label,
 .outputs__comment {
