@@ -157,6 +157,7 @@ body {
 	padding-inline-end: 1rem;
 
 	background-color: var(--color-neutral-very-light-grayish-cyan);
+	color: var(--color-neutral-very-dark-cyan);
 
 	font-size: var(--font-size-400);
 	text-align: end;
@@ -177,7 +178,8 @@ body {
 }
 
 .inputs__bill,
-.inputs__number-of-people {
+.inputs__number-of-people,
+.select-tip {
 	display: grid;
 	grid-template-columns: 4fr 3fr;
 }
@@ -185,6 +187,13 @@ body {
 .inputs__label {
 	font-size: var(--font-size-300);
 	color: var(--color-neutral-dark-grayish-cyan);
+}
+
+.inputs__error {
+	color: var(--color-accent-red);
+
+	font-size: var(--font-size-200);
+	text-align: end;
 }
 
 .input--bill,
@@ -198,6 +207,12 @@ body {
 	margin-block-end: clamp(2.25rem, 9.6vw, 2.75rem);
 }
 
+.input--bill {
+	background-image: url("./images/icon-dollar.svg");
+	background-repeat: no-repeat;
+	background-position: 1rem center;
+}
+
 /* 1.2. Tip input */
 
 .select-tip {
@@ -206,6 +221,8 @@ body {
 }
 
 .select-tip__grid {
+	grid-column: span 2;
+
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 1rem;
@@ -237,6 +254,12 @@ body {
 
 .inputs__number-of-people {
 	margin-block-end: 0.5rem;
+}
+
+.input--number-of-people {
+	background-image: url("./images/icon-person.svg");
+	background-repeat: no-repeat;
+	background-position: 1rem center;
 }
 
 /* 2. Output field */
