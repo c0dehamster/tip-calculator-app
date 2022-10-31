@@ -16,3 +16,23 @@ const outputTipAmount = document.querySelector("#result-tip-amount")
 const outputTotal = document.querySelector("#result-total")
 
 /* User input validation */
+
+// Validation function
+
+const checkForError = value => {
+	// Returns an error message or false if no error has been found
+
+	let errorMessage = ""
+
+	if (value.isNaN()) {
+		errorMessage = "Please enter a number"
+	} else if (value === 0) {
+		errorMessage = "Can't be zero"
+	} else if (value < 0) {
+		errorMessage = "Can't be negative"
+	} else {
+		return false
+	}
+
+	return errorMessage
+}
