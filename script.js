@@ -6,7 +6,7 @@ const billInput = document.querySelector(".input--bill")
 const customTipInput = document.querySelector(".input--custom-tip")
 const numberOfPeopleInput = document.querySelector(".input--number-of-people")
 
-const selectTipButtons = document.querySelector(".button--select-tip")
+const selectTipButtons = document.querySelectorAll(".select-tip__radio")
 
 const resetButton = document.querySelector(".button--reset")
 
@@ -110,6 +110,12 @@ const calculateTip = (bill, tip, numberOfPeople) => {
 billInput.addEventListener("input", e => (bill = processUserInput(e.target, billError)))
 customTipInput.addEventListener("input", e => (tip = processUserInput(e.target, tipError)))
 numberOfPeopleInput.addEventListener("input", e => (numberOfPeople = processUserInput(e.target, numberOfPeopleError)))
+
+selectTipButtons.forEach(button => {
+	button.addEventListener("click", e => {
+		tip = parseFloat(e.target.value)
+	})
+})
 
 /* Display the result of calculations */
 
