@@ -6,7 +6,8 @@ const billInput = document.querySelector(".input--bill")
 const customTipInput = document.querySelector(".input--custom-tip")
 const numberOfPeopleInput = document.querySelector(".input--number-of-people")
 
-const selectTipButtons = document.querySelectorAll(".select-tip__radio")
+const selectTipRadioButtons = document.querySelectorAll(".select-tip__radio")
+const selectTipLabels = document.querySelectorAll(".button--select-tip")
 
 const resetButton = document.querySelector(".button--reset")
 
