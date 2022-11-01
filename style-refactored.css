@@ -345,7 +345,7 @@ body {
 	}
 }
 
-.input--error {
+.input.input--error {
 	border: 2px solid var(--color-accent-red);
 }
 
