@@ -109,12 +109,19 @@ const calculateTip = (bill, tip, numberOfPeople) => {
 /* Adding event listeners to controls */
 
 billInput.addEventListener("input", e => (bill = processUserInput(e.target, billError)))
-customTipInput.addEventListener("input", e => (tip = processUserInput(e.target, tipError)))
+customTipInput.addEventListener("input", e => {
+	tip = processUserInput(e.target, tipError)
+
+	// Reset tip input buttons if custom tip is entered
+
+	selectTipRadioButtons.forEach(button => (button.checked = false))
+})
 numberOfPeopleInput.addEventListener("input", e => (numberOfPeople = processUserInput(e.target, numberOfPeopleError)))
 
-selectTipButtons.forEach(button => {
+selectTipRadioButtons.forEach(button => {
 	button.addEventListener("click", e => {
 		tip = parseFloat(e.target.value)
+		customTipInput.value = ""
 	})
 })
 
@@ -133,3 +140,13 @@ form.addEventListener("input", () => {
 })
 
 /* Reset */
+
+resetButton.addEventListener("click", () => {
+	form.reset()
+	bill = 0
+	tip = 0
+	numberOfPeople = 0
+	outputTipAmount.textContent = "$0.00"
+	outputTotal.textContent = "$0.00"
+	resetButton.classList.add("button--inactive")
+})

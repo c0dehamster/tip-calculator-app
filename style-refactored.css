@@ -243,6 +243,11 @@ body {
 	display: none;
 }
 
+.input__wrapper {
+	width: 100%;
+	position: relative;
+}
+
 .button--select-tip {
 	background-color: var(--color-neutral-very-dark-cyan);
 	color: var(--color-neutral-very-light-grayish-cyan);
