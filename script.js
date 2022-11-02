@@ -131,7 +131,7 @@ form.addEventListener("input", () => {
 	outputTipAmount.textContent = `$${calculateTip(bill, tip, numberOfPeople)[0]}`
 	outputTotal.textContent = `$${calculateTip(bill, tip, numberOfPeople)[1]}`
 
-	// Toggle reset button
+	// Toggle the reset button
 	if (!billInput.value && !customTipInput.value && !numberOfPeopleInput.value && !tip) {
 		resetButton.classList.add("button--inactive")
 	} else {
