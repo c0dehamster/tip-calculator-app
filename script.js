@@ -37,7 +37,7 @@ const checkForError = value => {
 	if (value === "") {
 		return false
 	}
-	const valueToFloat = parseFloat(value)
+	const valueToFloat = Number(value)
 
 	if (isNaN(valueToFloat)) {
 		errorMessage = "Please enter a number"
@@ -81,7 +81,7 @@ const processUserInput = (input, errorMessageBox) => {
 	} else {
 		showSuccess(input, errorMessageBox)
 		// return 0 when nothing is entered
-		return userInput === "" ? 0 : parseFloat(userInput)
+		return userInput === "" ? 0 : Number(userInput)
 	}
 }
 
@@ -118,7 +118,7 @@ numberOfPeopleInput.addEventListener("input", e => (numberOfPeople = processUser
 
 selectTipRadioButtons.forEach(button => {
 	button.addEventListener("click", e => {
-		tip = parseFloat(e.target.value)
+		tip = Number(e.target.value)
 		customTipInput.value = ""
 	})
 })
