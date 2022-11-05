@@ -30,11 +30,9 @@ const outputTotal = document.querySelector("#result-total")
 
 /* User input validation */
 
-// Validation function
+// Validation function returns an error message or false if no error has been found
 
 const checkForError = value => {
-	// Returns an error message or false if no error has been found
-
 	let errorMessage = ""
 	if (value === "") {
 		return false
