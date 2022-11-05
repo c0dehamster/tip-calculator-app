@@ -48,6 +48,8 @@ Users should be able to:
 
 This is my second attempt on this project. I learned more about the HTML form component, form input validation, and this time, I managed to finish the project.
 
+The description did not specify certain details, like how the app should handle non-numerical input values. I decided to provide an error message. Another way to solve this problem would be to prevent a user from entering any characters but digits.
+
 To make a group of mutually excluding buttons, I decided to use radio buttons stripped of their default styling. It allowed to simplify the JS code required to make them work.
 
 ### Continued development
