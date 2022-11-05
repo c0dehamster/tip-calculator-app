@@ -19,6 +19,8 @@
 				<img src="./images/logo.svg" alt="" aria-hidden="true" class="logo__image" />
 			</picture>
 
+			<h1 class="card__heading hidden--visually">Tip calculator</h1>
+
 			<form action="" class="inputs" id="inputs">
 				<div class="inputs__bill">
 					<label for="bill" class="inputs__label">Bill</label>
@@ -34,19 +36,19 @@
 						<legend class="select-tip__legend">select tip</legend>
 
 						<input type="radio" name="select-tip" class="select-tip__radio" value="5" id="radio5" />
-						<label for="radio5" class="button button--select-tip"><div>5%</div></label>
+						<label for="radio5" class="button button--select-tip"><span>5%</span></label>
 
 						<input type="radio" name="select-tip" class="select-tip__radio" value="10" id="radio10" />
-						<label for="radio10" class="button button--select-tip"><div>10%</div></label>
+						<label for="radio10" class="button button--select-tip"><span>10%</span></label>
 
 						<input type="radio" name="select-tip" class="select-tip__radio" value="15" id="radio15" />
-						<label for="radio15" class="button button--select-tip"><div>15%</div></label>
+						<label for="radio15" class="button button--select-tip"><span>15%</span></label>
 
 						<input type="radio" name="select-tip" class="select-tip__radio" value="25" id="radio25" />
-						<label for="radio25" class="button button--select-tip"><div>25%</div></label>
+						<label for="radio25" class="button button--select-tip"><span>25%</span></label>
 
 						<input type="radio" name="select-tip" class="select-tip__radio" value="50" id="radio50" />
-						<label for="radio50" class="button button--select-tip"><div>50%</div></label>
+						<label for="radio50" class="button button--select-tip"><span>50%</span></label>
 
 						<input
 							type="text"
@@ -70,6 +72,7 @@
 			</form>
 
 			<section class="outputs-wrapper">
+				<h2 class="outputs-wrapper__heading hidden--visually">Results</h2>
 				<div class="outputs">
 					<div class="outputs__grid-row">
 						<p class="outputs__label">Tip Amount</p>
